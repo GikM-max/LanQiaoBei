@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int gcd(int m, int n)
+{
+    if(n == 0) return m;  // 如果n=1,返回m
+    return gcd(n,m % n);  // 返回除数
+}
+int main()
+{
+    int m, n;
+    cin >> m >> n;
+    int result;
+    result = gcd(m,n);
+    cout << result << endl;
+    return 0;
+}
